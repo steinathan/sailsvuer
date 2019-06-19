@@ -1,0 +1,13 @@
+@import "~vuetify/src/styles/styles.sass";
+// @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+// The variables you want to modify
+$body-font-family: "Montserrat", sans-serif !important;
+// For updating SASS lists
+// $material-light: map-merge(
+//   $material-light,
+//   (
+//     cards: blue
+//   )
+// );
+$btn-border-radius: 8px;
