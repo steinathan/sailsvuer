@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-app>
+    <v-app app>
       <v-navigation-drawer
         :clipped="drawer.clipped"
         :fixed="drawer.fixed"

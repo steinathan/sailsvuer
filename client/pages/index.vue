@@ -15,14 +15,27 @@
 <script>
 import { mapState } from "vuex";
 export default {
+  myOption: "hello!",
   computed: {
     ...mapState(["user"])
   },
+
   data() {
     return {};
   },
-  async asyncData({ $axios }) {},
-  mounted() {}
+  mounted() {
+    this.$socket
+      .post("/api/v1/auth/login", {
+        emailAddress: "pricop@gmail.com",
+        password: "12345"
+      })
+      .then(data => {
+        console.log("data", data);
+      })
+      .catch(e => {
+        console.warn(e);
+      });
+  }
 };
 </script>
 

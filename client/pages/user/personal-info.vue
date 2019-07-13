@@ -263,7 +263,10 @@ export default {
       (this.phone = this.user.phone);
   },
   computed: {
-    ...mapState(["user", "loading"])
+    ...mapState(["user", "loading"]),
+    $isMobile() {
+      return false;
+    }
   },
   methods: {
     saveProfileDetails() {

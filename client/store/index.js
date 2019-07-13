@@ -4,7 +4,6 @@ export const state = () => ({
   error: {
     networkLost: false
   },
-  user: {},
   loading: false,
   success: false //# indicates the general success of a successfull page 😀
 });

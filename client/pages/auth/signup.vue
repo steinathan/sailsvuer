@@ -152,7 +152,7 @@ export default {
       //   password: this.rePassword || this.password,
       //   fullName: this.fullName
       // });
-      this.axios
+      this.$axios
         .post(
           "/auth/signup/",
           Object.assign(this.$route.query, {

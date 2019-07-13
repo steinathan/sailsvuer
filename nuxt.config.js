@@ -18,11 +18,6 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
-      },
-      {
-        rel: "stylesheet",
         href: "https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       }
     ]
@@ -40,8 +35,10 @@ module.exports = {
    */
   plugins: [
     { src: "~/plugins/moment.js" },
+    { src: "~/plugins/axios.js" },
     { src: "~/plugins/lodash.js" },
     { src: "~/plugins/globalVars.js", mode: "client" },
+    { src: "~/plugins/vue-socket.io", mode: "client" },
     { src: "~/plugins/vuex-persist", mode: "client" }
   ],
   /*
@@ -64,17 +61,15 @@ module.exports = {
    */
   vuetify: {
     theme: {
-      primary: "#0c8da0",
-      secondary: "#001c20",
-      error: "#f44336",
-      warning: "#ffc107",
-      info: "#00bcd4",
-      success: "#4caf50"
+      light: {
+        primary: "#0c8da0",
+        secondary: "#001c20",
+        error: "#f44336",
+        warning: "#ffc107",
+        info: "#00bcd4",
+        success: "#4caf50"
+      }
     },
-    // defaultAssets: {
-    //   font: true,
-    //   icons: true
-    // },
     treeShake: true,
     customVariables: ["~assets/style/variables.scss"]
   },

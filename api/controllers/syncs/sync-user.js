@@ -9,11 +9,12 @@ module.exports = {
   exits: {
     noUser: {
       statusCode: 204,
-      description: "no user found",
-    },
+      description: "no user found"
+    }
   },
 
   fn: async function(inputs) {
+    sails.log("Africa/Lagos");
     if (this.req.me) {
       var user = await User.findOne()
         .where({ id: this.req.me.id })
@@ -22,5 +23,5 @@ module.exports = {
     }
     throw "noUser";
     // All done.
-  },
+  }
 };
